@@ -182,7 +182,6 @@ const tags = {
     const {
       tag, disabled, vModel, clearable, placeholder, width
     } = attrBuilder(el)
-    debugger
     const filterable = el.filterable ? 'filterable' : ''
     const multiple = el.multiple ? 'multiple' : ''
     let child = buildElSelectChild(el)
