@@ -1,3 +1,13 @@
+# gsui-form-generator
+
+适配公司内部组件库的表单设计及代码生成器
+
+感谢原始作者的代码和详细的文档说明
+
+---
+
+# 原始项目的 README
+
 ![image](https://ae01.alicdn.com/kf/U51bfb661aba945b48a4c71774421d414C.gif)
 ## 简介
 Element UI表单设计及代码生成器，可将生成的代码直接运行在基于Element的vue项目中；也可导出JSON表单，使用配套的解析器将JSON解析成真实的表单。 
