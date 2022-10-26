@@ -140,7 +140,7 @@ import {
 } from '@/components/generator/html'
 import { makeUpJs } from '@/components/generator/js'
 import { makeUpCss } from '@/components/generator/css'
-import drawingDefalut from '@/components/generator/drawingDefalut'
+import drawingDefault from '@/components/generator/drawingDefault'
 import logo from '@/assets/logo.png'
 import CodeTypeDialog from './CodeTypeDialog'
 import DraggableItem from './DraggableItem'
@@ -176,16 +176,16 @@ export default {
       selectComponents,
       layoutComponents,
       labelWidth: 100,
-      drawingList: drawingDefalut,
+      drawingList: drawingDefault,
       drawingData: {},
-      activeId: drawingDefalut[0].formId,
+      activeId: drawingDefault[0].formId,
       drawerVisible: false,
       formData: {},
       dialogVisible: false,
       jsonDrawerVisible: false,
       generateConf: null,
       showFileName: false,
-      activeData: drawingDefalut[0],
+      activeData: drawingDefault[0],
       saveDrawingListDebounce: debounce(340, saveDrawingList),
       saveIdGlobalDebounce: debounce(340, saveIdGlobal),
       leftComponents: [
@@ -242,7 +242,7 @@ export default {
     if (Array.isArray(drawingListInDB) && drawingListInDB.length > 0) {
       this.drawingList = drawingListInDB
     } else {
-      this.drawingList = drawingDefalut
+      this.drawingList = drawingDefault
     }
     this.activeFormItem(this.drawingList[0])
     if (formConfInDB) {

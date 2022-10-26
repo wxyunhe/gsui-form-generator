@@ -5,7 +5,7 @@ export default [
       labelWidth: null,
       showLabel: true,
       changeTag: true,
-      tag: 'el-input',
+      tag: 'gs-input',
       tagIcon: 'input',
       defaultValue: undefined,
       required: true,
@@ -19,16 +19,11 @@ export default [
       }]
     },
     // 组件的插槽属性
-    __slot__: {
-      prepend: '',
-      append: ''
-    },
+    __slot__: {},
     __vModel__: 'mobile',
     placeholder: '请输入手机号',
     style: { width: '100%' },
     clearable: true,
-    'prefix-icon': 'el-icon-mobile',
-    'suffix-icon': '',
     maxlength: 11,
     'show-word-limit': true,
     readonly: false,

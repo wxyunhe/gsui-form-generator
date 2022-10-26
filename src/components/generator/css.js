@@ -1,6 +1,4 @@
 const styles = {
-  'el-rate': '.el-rate{display: inline-block; vertical-align: text-top;}',
-  'el-upload': '.el-upload__tip{line-height: 1.2;}'
 }
 
 function addCss(cssList, el) {

@@ -5,7 +5,7 @@ export default {
     if (conf['list-type'] === 'picture-card') {
       list.push(<i class="el-icon-plus"></i>)
     } else {
-      list.push(<el-button size="small" type="primary" icon="el-icon-upload">{config.buttonText}</el-button>)
+      list.push(<gs-button size="small" type="primary" icon="el-icon-upload">{config.buttonText}</gs-button>)
     }
     if (config.showTip) {
       list.push(

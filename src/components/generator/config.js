@@ -1,6 +1,6 @@
 // 表单属性【右面板】
 export const formConf = {
-  formRef: 'elForm',
+  formRef: 'gsForm',
   formModel: 'formData',
   size: 'medium',
   labelPosition: 'right',
@@ -21,27 +21,21 @@ export const inputComponents = [
       labelWidth: null,
       showLabel: true,
       changeTag: true,
-      tag: 'el-input',
+      tag: 'gs-input',
       tagIcon: 'input',
       defaultValue: undefined,
       required: true,
       layout: 'colFormItem',
       span: 24,
-      document: 'https://element.eleme.cn/#/zh-CN/component/input',
+      document: 'http://gs-ui.gridsum.com/#/zh-CN/component/input',
       // 正则校验规则
       regList: []
     },
     // 组件的插槽属性
-    __slot__: {
-      prepend: '',
-      append: ''
-    },
     // 其余的为可直接写在组件标签上的属性
     placeholder: '请输入',
     style: { width: '100%' },
     clearable: true,
-    'prefix-icon': '',
-    'suffix-icon': '',
     maxlength: null,
     'show-word-limit': false,
     readonly: false,
@@ -52,7 +46,7 @@ export const inputComponents = [
       label: '多行文本',
       labelWidth: null,
       showLabel: true,
-      tag: 'el-input',
+      tag: 'gs-textarea',
       tagIcon: 'textarea',
       defaultValue: undefined,
       required: true,
@@ -60,9 +54,8 @@ export const inputComponents = [
       span: 24,
       regList: [],
       changeTag: true,
-      document: 'https://element.eleme.cn/#/zh-CN/component/input'
+      document: 'http://gs-ui.gridsum.com/#/zh-CN/component/input'
     },
-    type: 'textarea',
     placeholder: '请输入',
     autosize: {
       minRows: 4,
@@ -80,25 +73,20 @@ export const inputComponents = [
       showLabel: true,
       labelWidth: null,
       changeTag: true,
-      tag: 'el-input',
+      tag: 'gs-input',
       tagIcon: 'password',
       defaultValue: undefined,
       layout: 'colFormItem',
       span: 24,
       required: true,
       regList: [],
-      document: 'https://element.eleme.cn/#/zh-CN/component/input'
-    },
-    __slot__: {
-      prepend: '',
-      append: ''
+      document: 'http://gs-ui.gridsum.com/#/zh-CN/component/input'
     },
     placeholder: '请输入',
+    type: 'password',
     'show-password': true,
     style: { width: '100%' },
     clearable: true,
-    'prefix-icon': '',
-    'suffix-icon': '',
     maxlength: null,
     'show-word-limit': false,
     readonly: false,
@@ -110,14 +98,14 @@ export const inputComponents = [
       showLabel: true,
       changeTag: true,
       labelWidth: null,
-      tag: 'el-input-number',
+      tag: 'gs-input-number',
       tagIcon: 'number',
       defaultValue: undefined,
       span: 24,
       layout: 'colFormItem',
       required: true,
       regList: [],
-      document: 'https://element.eleme.cn/#/zh-CN/component/input-number'
+      document: 'http://gs-ui.gridsum.com/#/zh-CN/component/input'
     },
     placeholder: '',
     min: undefined,
@@ -130,7 +118,7 @@ export const inputComponents = [
   },
   {
     __config__: {
-      label: '编辑器',
+      label: 'tinymce编辑器',
       showLabel: true,
       changeTag: true,
       labelWidth: null,
@@ -156,14 +144,14 @@ export const selectComponents = [
       label: '下拉选择',
       showLabel: true,
       labelWidth: null,
-      tag: 'el-select',
+      tag: 'gs-select',
       tagIcon: 'select',
       layout: 'colFormItem',
       span: 24,
       required: true,
       regList: [],
       changeTag: true,
-      document: 'https://element.eleme.cn/#/zh-CN/component/select'
+      document: 'http://gs-ui.gridsum.com/#/zh-CN/component/select'
     },
     __slot__: {
       options: [{
@@ -190,7 +178,7 @@ export const selectComponents = [
       dataConsumer: 'options',
       showLabel: true,
       labelWidth: null,
-      tag: 'el-cascader',
+      tag: 'gs-cascader-select',
       tagIcon: 'cascader',
       layout: 'colFormItem',
       defaultValue: [],
@@ -199,7 +187,7 @@ export const selectComponents = [
       required: true,
       regList: [],
       changeTag: true,
-      document: 'https://element.eleme.cn/#/zh-CN/component/cascader'
+      document: 'http://gs-ui.gridsum.com/#/zh-CN/component/cascader-select'
     },
     options: [{
       id: 1,
@@ -232,7 +220,7 @@ export const selectComponents = [
       label: '单选框组',
       labelWidth: null,
       showLabel: true,
-      tag: 'el-radio-group',
+      tag: 'gs-radio-group',
       tagIcon: 'radio',
       changeTag: true,
       defaultValue: undefined,
@@ -242,7 +230,7 @@ export const selectComponents = [
       regList: [],
       required: true,
       border: false,
-      document: 'https://element.eleme.cn/#/zh-CN/component/radio'
+      document: 'http://gs-ui.gridsum.com/#/zh-CN/component/radio'
     },
     __slot__: {
       options: [{
@@ -260,7 +248,7 @@ export const selectComponents = [
   {
     __config__: {
       label: '多选框组',
-      tag: 'el-checkbox-group',
+      tag: 'gs-checkbox-group',
       tagIcon: 'checkbox',
       defaultValue: [],
       span: 24,
@@ -272,7 +260,7 @@ export const selectComponents = [
       regList: [],
       changeTag: true,
       border: false,
-      document: 'https://element.eleme.cn/#/zh-CN/component/checkbox'
+      document: 'http://gs-ui.gridsum.com/#/zh-CN/component/checkbox'
     },
     __slot__: {
       options: [{
@@ -292,7 +280,7 @@ export const selectComponents = [
   {
     __config__: {
       label: '开关',
-      tag: 'el-switch',
+      tag: 'gs-switch',
       tagIcon: 'switch',
       defaultValue: false,
       span: 24,
@@ -302,7 +290,7 @@ export const selectComponents = [
       required: true,
       regList: [],
       changeTag: true,
-      document: 'https://element.eleme.cn/#/zh-CN/component/switch'
+      document: 'http://gs-ui.gridsum.com/#/zh-CN/component/switch'
     },
     style: {},
     disabled: false,
@@ -316,7 +304,7 @@ export const selectComponents = [
   {
     __config__: {
       label: '滑块',
-      tag: 'el-slider',
+      tag: 'gs-slider',
       tagIcon: 'slider',
       defaultValue: null,
       span: 24,
@@ -326,7 +314,7 @@ export const selectComponents = [
       required: true,
       regList: [],
       changeTag: true,
-      document: 'https://element.eleme.cn/#/zh-CN/component/slider'
+      document: 'http://gs-ui.gridsum.com/#/zh-CN/component/slider'
     },
     disabled: false,
     min: 0,
@@ -338,7 +326,7 @@ export const selectComponents = [
   {
     __config__: {
       label: '时间选择',
-      tag: 'el-time-picker',
+      tag: 'gs-time-picker',
       tagIcon: 'time',
       defaultValue: null,
       span: 24,
@@ -348,7 +336,7 @@ export const selectComponents = [
       required: true,
       regList: [],
       changeTag: true,
-      document: 'https://element.eleme.cn/#/zh-CN/component/time-picker'
+      document: 'http://gs-ui.gridsum.com/#/zh-CN/component/time-picker'
     },
     placeholder: '请选择',
     style: { width: '100%' },
@@ -437,48 +425,6 @@ export const selectComponents = [
   },
   {
     __config__: {
-      label: '评分',
-      tag: 'el-rate',
-      tagIcon: 'rate',
-      defaultValue: 0,
-      span: 24,
-      showLabel: true,
-      labelWidth: null,
-      layout: 'colFormItem',
-      required: true,
-      regList: [],
-      changeTag: true,
-      document: 'https://element.eleme.cn/#/zh-CN/component/rate'
-    },
-    style: {},
-    max: 5,
-    'allow-half': false,
-    'show-text': false,
-    'show-score': false,
-    disabled: false
-  },
-  {
-    __config__: {
-      label: '颜色选择',
-      tag: 'el-color-picker',
-      tagIcon: 'color',
-      span: 24,
-      defaultValue: null,
-      showLabel: true,
-      labelWidth: null,
-      layout: 'colFormItem',
-      required: true,
-      regList: [],
-      changeTag: true,
-      document: 'https://element.eleme.cn/#/zh-CN/component/color-picker'
-    },
-    'show-alpha': false,
-    'color-format': '',
-    disabled: false,
-    size: 'medium'
-  },
-  {
-    __config__: {
       label: '上传',
       tag: 'el-upload',
       tagIcon: 'upload',
@@ -529,7 +475,7 @@ export const layoutComponents = [
       showLabel: true,
       changeTag: true,
       labelWidth: null,
-      tag: 'el-button',
+      tag: 'gs-button',
       tagIcon: 'button',
       span: 24,
       layout: 'colFormItem',

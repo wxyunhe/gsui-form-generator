@@ -302,7 +302,7 @@
               @input="setTimeValue($event)"
             />
           </el-form-item>
-          <template v-if="['el-checkbox-group', 'el-radio-group', 'el-select'].indexOf(activeData.__config__.tag) > -1">
+          <template v-if="['gs-checkbox-group', 'gs-radio-group', 'gs-select'].indexOf(activeData.__config__.tag) > -1">
             <el-divider>选项</el-divider>
             <draggable
               :list="activeData.__slot__.options"
@@ -339,7 +339,7 @@
             <el-divider />
           </template>
 
-          <template v-if="['el-cascader', 'el-table'].includes(activeData.__config__.tag)">
+          <template v-if="['gs-cascader-select', 'el-table'].includes(activeData.__config__.tag)">
             <el-divider>选项</el-divider>
             <el-form-item v-if="activeData.__config__.dataType" label="数据类型">
               <el-radio-group v-model="activeData.__config__.dataType" size="small">
@@ -484,7 +484,7 @@
               (activeData.__config__.optionType === 'button' ||
                 activeData.__config__.border ||
                 activeData.__config__.tag === 'el-color-picker' ||
-                activeData.__config__.tag === 'el-button')"
+                activeData.__config__.tag === 'gs-button')"
             label="组件尺寸"
           >
             <el-radio-group v-model="activeData.size">
@@ -502,7 +502,7 @@
           <el-form-item v-if="activeData['show-word-limit'] !== undefined" label="输入统计">
             <el-switch v-model="activeData['show-word-limit']" />
           </el-form-item>
-          <el-form-item v-if="activeData.__config__.tag === 'el-input-number'" label="严格步数">
+          <el-form-item v-if="activeData.__config__.tag === 'gs-input-number'" label="严格步数">
             <el-switch v-model="activeData['step-strictly']" />
           </el-form-item>
           <el-form-item v-if="activeData.__config__.tag === 'el-cascader'" label="任选层级">
@@ -535,10 +535,10 @@
           <el-form-item v-if="activeData.disabled !== undefined" label="是否禁用">
             <el-switch v-model="activeData.disabled" />
           </el-form-item>
-          <el-form-item v-if="activeData.__config__.tag === 'el-select'" label="能否搜索">
+          <el-form-item v-if="activeData.__config__.tag === 'gs-select'" label="能否搜索">
             <el-switch v-model="activeData.filterable" />
           </el-form-item>
-          <el-form-item v-if="activeData.__config__.tag === 'el-select'" label="是否多选">
+          <el-form-item v-if="activeData.__config__.tag === 'gs-select'" label="是否多选">
             <el-switch v-model="activeData.multiple" @change="multipleChange" />
           </el-form-item>
           <el-form-item v-if="activeData.__config__.required !== undefined" label="是否必填">
@@ -808,13 +808,13 @@ export default {
       return this.activeData.__config__.tag
     },
     isShowMin() {
-      return ['el-input-number', 'el-slider'].indexOf(this.activeTag) > -1
+      return ['gs-input-number', 'gs-slider'].indexOf(this.activeTag) > -1
     },
     isShowMax() {
-      return ['el-input-number', 'el-slider', 'el-rate'].indexOf(this.activeTag) > -1
+      return ['gs-input-number', 'gs-slider'].indexOf(this.activeTag) > -1
     },
     isShowStep() {
-      return ['el-input-number', 'el-slider'].indexOf(this.activeTag) > -1
+      return ['gs-input-number', 'gs-slider'].indexOf(this.activeTag) > -1
     }
   },
   watch: {

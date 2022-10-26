@@ -3,15 +3,15 @@ import { deepClone } from '@/utils/index'
 import render from '@/components/render/render.js'
 
 const ruleTrigger = {
-  'el-input': 'blur',
-  'el-input-number': 'blur',
-  'el-select': 'change',
-  'el-radio-group': 'change',
-  'el-checkbox-group': 'change',
-  'el-cascader': 'change',
+  'gs-input': 'blur',
+  'gs-input-number': 'blur',
+  'gs-textarea': 'blur',
+  'gs-select': 'change',
+  'gs-radio-group': 'change',
+  'gs-checkbox-group': 'change',
+  'gs-cascader': 'change',
   'el-time-picker': 'change',
-  'el-date-picker': 'change',
-  'el-rate': 'change'
+  'el-date-picker': 'change'
 }
 
 const layouts = {
@@ -22,27 +22,27 @@ const layouts = {
     let labelWidth = config.labelWidth ? `${config.labelWidth}px` : null
     if (config.showLabel === false) labelWidth = '0'
     return (
-      <el-col span={config.span}>
-        <el-form-item label-width={labelWidth} prop={scheme.__vModel__}
+      <gs-col span={config.span}>
+        <gs-form-item label-width={labelWidth} prop={scheme.__vModel__}
           label={config.showLabel ? config.label : ''}>
           <render conf={scheme} on={listeners} />
-        </el-form-item>
-      </el-col>
+        </gs-form-item>
+      </gs-col>
     )
   },
   rowFormItem(h, scheme) {
     let child = renderChildren.apply(this, arguments)
     if (scheme.type === 'flex') {
-      child = <el-row type={scheme.type} justify={scheme.justify} align={scheme.align}>
+      child = <gs-row type={scheme.type} justify={scheme.justify} align={scheme.align}>
               {child}
-            </el-row>
+            </gs-row>
     }
     return (
-      <el-col span={scheme.span}>
-        <el-row gutter={scheme.gutter}>
+      <gs-col span={scheme.span}>
+        <gs-row gutter={scheme.gutter}>
           {child}
-        </el-row>
-      </el-col>
+        </gs-row>
+      </gs-col>
     )
   }
 }
@@ -51,8 +51,8 @@ function renderFrom(h) {
   const { formConfCopy } = this
 
   return (
-    <el-row gutter={formConfCopy.gutter}>
-      <el-form
+    <gs-row gutter={formConfCopy.gutter}>
+      <gs-form
         size={formConfCopy.size}
         label-position={formConfCopy.labelPosition}
         disabled={formConfCopy.disabled}
@@ -64,18 +64,18 @@ function renderFrom(h) {
       >
         {renderFormItem.call(this, h, formConfCopy.fields)}
         {formConfCopy.formBtns && formBtns.call(this, h)}
-      </el-form>
-    </el-row>
+      </gs-form>
+    </gs-row>
   )
 }
 
 function formBtns(h) {
-  return <el-col>
-    <el-form-item size="large">
-      <el-button type="primary" onClick={this.submitForm}>提交</el-button>
-      <el-button onClick={this.resetForm}>重置</el-button>
-    </el-form-item>
-  </el-col>
+  return <gs-col>
+    <gs-form-item size="large">
+      <gs-button type="primary" onClick={this.submitForm}>提交</gs-button>
+      <gs-button onClick={this.resetForm}>重置</gs-button>
+    </gs-form-item>
+  </gs-col>
 }
 
 function renderFormItem(h, elementList) {
